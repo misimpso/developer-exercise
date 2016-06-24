@@ -35,11 +35,11 @@ class Exercise
         # eg. the Fibonacci sequence up to 6 terms is (1, 1, 2, 3, 5, 8),
     # and the sum of its even numbers is (2 + 8) = 10
     def self.even_fibonacci(nth)
-        current = 1
+        current = 1     #Current and Previous are used to traverse through the fibonacci sequence
         previous = 0
         even_sum = 0
-        nth.times {
-            if current % 2 == 0
+        nth.times {      #loop n times and calculate each stage of the fibonacci sequence
+            if current % 2 == 0    #If the current number is even then add it to the sum
                 even_sum += current
             end
             temp = current + previous
